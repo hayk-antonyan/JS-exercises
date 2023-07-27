@@ -135,3 +135,4 @@ let numbers = [a, b, c];
  if(a<b){
  		alert(a)
  }
+ nubers();
