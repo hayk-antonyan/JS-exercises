@@ -1,2 +1,2 @@
 # JS exercises
- Ծրագրավորման խնդիրների ժողովածու - Ավետիսյան
+Programming tasks - Avetisyan
