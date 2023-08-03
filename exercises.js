@@ -100,32 +100,34 @@
 
 // 27 կարտածեն true, եթե տրված թվերը թվաբանական պրոգրեսիա են կազմում, հակառակ դեպքում՝ false
 
-// let a=25;
-// let b=6;
-// let c=12;
+// let a=3;
+// let b=5;
+// let c=9;
 
-// function arithmetic(){
-// 	if(a+b==c || a+c==b ||b+c==a){
+// function isArithmetic(a, b, c){
+// 	if((b - a) === (c - b)){
 // 		alert("true");
 // 	}else{
 // 		alert("false");
 // 	}
-// }arithmetic();
+// };
+// isArithmetic(a, b, c);
 
 
 // 28 կարտածեն true, եթե տրված թվերը երկրաչափական պրոգրեսիա են կազմում, հակառակ դեպքում՝ false
 
-// let a=25;
-// let b=6;
-// let c=12;
+// let a=6;
+// let b=12;
+// let c=24;
 
-// function geometric(){
-// 	if(a*b==c || a*c==b ||b*c==a){
+// function isGeometric(a, b, c){
+// 	if(b / a === c / b){
 // 		alert("true");
 // 	}else{
 // 		alert("false");
 // 	}
-// }geometric();
+// };
+// isGeometric(a, b, c);
 
 
 // 29 Տրված թվերը կարտածեն ըստ աճման կարգի հաջորդականության
@@ -137,10 +139,7 @@
 // const z = 9;
 // function displayInAscendingOrder(x, y, z) {
 //   const numbers = [x, y, z];
-//   //  numbers.sort(function(a, b){
-//   // 	return a-b;
-//   // });
-//   //  	alert(numbers.join(", "));
+ 
 //   numbers.sort((a, b) => a - b);
 //   alert(numbers.join(", ")); //returns an array as a string
 // }
@@ -163,7 +162,7 @@
 
 
 
-// Տրված են իրարից տարբեր a, b, c, և d թվերը։ Կազմել բլոկ-սխեմա, և ծրագիր, որոնք կարտածեն
+// Տրված են իրարից տարբեր a, b, c, և d թվերը։ Կազմել բլոկ-սխեմա, և ծրագիր, որոնք կարտածեն`
 
 // 31 կարտածեն տրված թվերից մեծագույնի արժեքը
 
@@ -253,11 +252,10 @@
 // }
 
 
-
+//another way to find out is the number odd or not
 // function isOdd(number) {
 //   return number % 2 !== 0;
 // }
-
 // const num = 7; // Replace this with the number you want to check
 // if (isOdd(num)) {
 //   alert(`${num} is an odd number.`);
@@ -268,18 +266,63 @@
 
 // 37  կարտածեն true, եթե տրված թվերը կազմում են թվաբանական պրոգրեսիա, այլապես false
 
-let a = 13;
-let b = 8;
-let c = 5;
-let d = 2;
+// let a = 13;
+// let b = 8;
+// let c = 25;
+// let d = 2;
 
-// if (c == a+b && d == b+c){
-// 	alert('true');
+// function isArithmeticProgression(a, b, c, d) {
+//   return (b - a) === (c - b) && (c - b) === (d - c);
+// }
+// if ( isArithmeticProgression === true){
+// 	alert("true");
 // }else{
-// 	alert('false');
+// 	alert("false");
 // }
 
-function isArithmeticProgression(a, b, c, d) {
-  return (b - a) === (c - b) && (c - b) === (d - c);
+
+// 38 եթե տրված թվերը կազմում են երկրաչափական պրոգրեսիա, ապա կարտածեն true, հակառակ դեպքում՝ false 
+
+// let a = 2;
+// let b = 4;
+// let c = 8;
+// let d = 16;
+
+// function isGeometricProgression(a, b, c, d) {
+//   if ((b / a) === (c / b) && (c / b) === (d / c)){
+// 		alert("true");
+// }else{
+// 		alert("false");
+// }
+// };
+// isGeometricProgression(a, b, c, d);
+
+// 39 Տրված թվերը կարտածեն ըստ աճման կարգի հաջորդականության
+
+// let a = 2;
+// let b = 4;
+// let c = 8;
+// let d = 16;
+
+// function displayInAscendingOrder(a, b, c, d) {
+//   const numbers = [a, b, c, d];
+
+//   numbers.sort((x, y) => x - y);
+//   alert(numbers.join(", ")); //returns an array as a string
+// }
+// displayInAscendingOrder(a, b, c, d);
+
+ //40 Տրված թվերը կարտածեն ըստ աճման կարգի հաջորդականության
+
+let a = 29;
+let b = 4;
+let c = 8;
+let d = 16;
+
+function displayInDescendingOrder(a, b, c, d) {
+  const numbers = [a, b, c, d];
+
+  numbers.sort((x, y) => y - x);
+  alert(numbers.join(", ")); //returns an array as a string
 }
-isArithmeticProgression();
+displayInDescendingOrder(a, b, c, d);
