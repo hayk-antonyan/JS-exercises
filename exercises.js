@@ -314,15 +314,98 @@
 
  //40 Տրված թվերը կարտածեն ըստ աճման կարգի հաջորդականության
 
-let a = 29;
-let b = 4;
-let c = 8;
-let d = 16;
+// let a = 29;
+// let b = 4;
+// let c = 8;
+// let d = 16;
 
-function displayInDescendingOrder(a, b, c, d) {
-  const numbers = [a, b, c, d];
+// function displayInDescendingOrder(a, b, c, d) {
+//   const numbers = [a, b, c, d];
 
-  numbers.sort((x, y) => y - x);
-  alert(numbers.join(", ")); //returns an array as a string
+//   numbers.sort((x, y) => y - x);
+//   alert(numbers.join(", ")); //returns an array as a string
+// }
+// displayInDescendingOrder(a, b, c, d);
+
+
+
+//Տրված է եռանիշ թիվ։ Կազմել բլոկ սխեմա և ծրագիր, որոնք 
+
+
+// 51 Տրամաբանական տիպի փոփոխականին վերագրել true արժեք, 
+// եթե եռանիշ թվի միավորների թվանշանը հավասար է տասնավորների և հարյուրավորների թվանշանների գումարին, 
+// հակառակ դեպքում false: Արտածել փոփոխականի արժեքը
+
+// Replace this with your three-digit number
+// const t = 527;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t % 100) / 10);
+// const hundredsDigit = Math.floor(t / 100);
+
+// const isConditionMet = unitsDigit === tensDigit + hundredsDigit;
+
+// alert(isConditionMet);
+
+
+//52
+
+// const t = 599;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t % 100) / 10);
+// const hundredsDigit = Math.floor(t / 100);
+ 	
+// if(unitsDigit === tensDigit || unitsDigit === hundredsDigit || tensDigit === hundredsDigit){
+// 	alert("true");
+// }
+// 	alert("false");
+
+
+// 53
+
+// const t = 599;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t % 100) / 10);
+// const hundredsDigit = Math.floor(t / 100);
+
+// let k = t / (unitsDigit + tensDigit + hundredsDigit);
+
+// alert(k);
+
+
+// 54
+
+// const t = 124;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t % 100) / 10);
+// const hundredsDigit = Math.floor(t / 100);
+
+// if ( unitsDigit > tensDigit && unitsDigit > hundredsDigit ){
+// 	alert("The biggest value is" + " " + unitsDigit);
+// }else if( tensDigit > unitsDigit && tensDigit> hundredsDigit){
+// 	alert("The biggest value is" + " " + tensDigit);
+// }else{
+// 	alert("The biggest value is" + " " + hundredsDigit);
+// }
+
+
+// 55
+
+const t = 824;
+
+const unitsDigit = t % 10;
+const tensDigit = Math.floor((t % 100) / 10);
+const hundredsDigit = Math.floor(t / 100);
+
+if ( unitsDigit < tensDigit && unitsDigit < hundredsDigit ){
+	alert("The smallest value is" + " " + unitsDigit);
+}else if( tensDigit < unitsDigit && tensDigit < hundredsDigit){
+	alert("The smallest value is" + " " + tensDigit);
+}else{
+	alert("The smallest value is" + " " + hundredsDigit);
 }
-displayInDescendingOrder(a, b, c, d);
+
+
