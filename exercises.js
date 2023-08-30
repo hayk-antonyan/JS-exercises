@@ -394,18 +394,73 @@
 
 // 55
 
-const t = 824;
+// const t = 824;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t % 100) / 10);
+// const hundredsDigit = Math.floor(t / 100);
+
+// if ( unitsDigit < tensDigit && unitsDigit < hundredsDigit ){
+// 	alert("The smallest value is" + " " + unitsDigit);
+// }else if( tensDigit < unitsDigit && tensDigit < hundredsDigit){
+// 	alert("The smallest value is" + " " + tensDigit);
+// }else{
+// 	alert("The smallest value is" + " " + hundredsDigit);
+// }
+
+// 56
+
+// const t = 178;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t % 100) / 10);
+// const hundredsDigit = Math.floor(t / 100);
+
+// alert("Units digit is "+ unitsDigit);
+// alert("Tens digit is " + tensDigit);
+// alert("Hundreds digit is " + hundredsDigit);
+// const digitsRatio = ( unitsDigit + tensDigit + hundredsDigit ) / t;
+// if(unitsDigit > tensDigit){
+// 	alert("Digits ratio is" + " " + digitsRatio);
+// }else{
+// 	alert("The number is" + " " + t);
+// }
+
+
+// 57
+
+// const t = 123;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t % 100) / 10);
+// const hundredsDigit = Math.floor(t / 100);
+
+// const tensToUnits = tensDigit / unitsDigit;
+// const hundredsToUnits = hundredsDigit / unitsDigit;
+
+// alert("Tens to units is r=equal to " + tensToUnits);
+// alert("Hundreds to units is equal to " + hundredsToUnits);
+
+// if(t > 300){
+// 	alert("Tens digit divided to units is equal to " + " " + tensToUnits);
+// }else{
+// 	alert("Hundreds digit divided to units is equal to " + " " + hundredsToUnits);
+// }
+
+
+//58
+
+const t = 459;
 
 const unitsDigit = t % 10;
 const tensDigit = Math.floor((t % 100) / 10);
 const hundredsDigit = Math.floor(t / 100);
 
-if ( unitsDigit < tensDigit && unitsDigit < hundredsDigit ){
-	alert("The smallest value is" + " " + unitsDigit);
-}else if( tensDigit < unitsDigit && tensDigit < hundredsDigit){
-	alert("The smallest value is" + " " + tensDigit);
+if( tensDigit + hundredsDigit < 5){
+	let a = t;
+	alert("The value of a is equal to " + a);
 }else{
-	alert("The smallest value is" + " " + hundredsDigit);
+	let b = t;
+	alert("The value of b is equal to " + b);
 }
-
-
+alert("The value of t is equal to " + t);
