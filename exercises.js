@@ -450,17 +450,48 @@
 
 //58
 
-const t = 459;
+// const t = 459;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t % 100) / 10);
+// const hundredsDigit = Math.floor(t / 100);
+
+// if( tensDigit + hundredsDigit < 5){
+// 	let a = t;
+// 	alert("The value of a is equal to " + a);
+// }else{
+// 	let b = t;
+// 	alert("The value of b is equal to " + b);
+// }
+// alert("The value of t is equal to " + t);
+
+
+// 59 Ascending order
+
+// const t = 819;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t % 100) / 10);
+// const hundredsDigit = Math.floor(t / 100);
+
+// const numbersArray = [unitsDigit, tensDigit, hundredsDigit];
+
+// numbersArray.sort(function(a, b){
+// 	return a - b;
+// });
+// alert("Numbers in ascending order: " + numbersArray.join(', '));
+
+// 60 Descending order
+
+const t = 819;
 
 const unitsDigit = t % 10;
 const tensDigit = Math.floor((t % 100) / 10);
 const hundredsDigit = Math.floor(t / 100);
 
-if( tensDigit + hundredsDigit < 5){
-	let a = t;
-	alert("The value of a is equal to " + a);
-}else{
-	let b = t;
-	alert("The value of b is equal to " + b);
-}
-alert("The value of t is equal to " + t);
+const numbersArray = [unitsDigit, tensDigit, hundredsDigit];
+
+numbersArray.sort(function(a, b){
+	return b - a;
+});
+alert("Numbers in descending order: " + numbersArray.join(', '));
