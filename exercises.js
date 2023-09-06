@@ -656,9 +656,9 @@ const tensDigit = Math.floor((t / 10) % 10);
 const hundredsDigit = Math.floor((t / 100) % 10);
 const thousandsDigit = Math.floor( t / 1000); 
 
-productOfDigits = unitsDigit * tensDigit * hundredsDigit * thousandsDigit;
+multipledDigits = unitsDigit * tensDigit * hundredsDigit * thousandsDigit;
 let y;
-if( productOfDigits > 200){
+if( multipledDigits > 200){
 	y = 0;
 }else{
 	y = 1;
