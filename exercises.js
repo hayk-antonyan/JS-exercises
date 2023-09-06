@@ -483,15 +483,183 @@
 
 // 60 Descending order
 
-const t = 819;
+// const t = 819;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t % 100) / 10);
+// const hundredsDigit = Math.floor(t / 100);
+
+// const numbersArray = [unitsDigit, tensDigit, hundredsDigit];
+
+// numbersArray.sort(function(a, b){
+// 	return b - a;
+// });
+// alert("Numbers in descending order: " + numbersArray.join(', '));
+
+
+//61 Տրված է քառանիշ թիվ, կազմել տվյալ խնդրի բլոկ-սխեման և ծրագիրը։
+
+// const t = 4325;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t / 10) % 10);
+// const hundredsDigit = Math.floor((t / 100) % 10);
+// const thousandsDigit = Math.floor( t / 1000); 
+
+
+// if(unitsDigit + tensDigit == hundredsDigit + thousandsDigit){
+// 	alert("true");
+// }else{
+// 	alert("false");
+// }alert(t);
+
+
+// 62	
+
+// const t = 4321;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t / 10) % 10);
+// const hundredsDigit = Math.floor((t / 100) % 10);
+// const thousandsDigit = Math.floor( t / 1000); 
+
+
+// if( t < 5000 && unitsDigit + hundredsDigit !== 0 ){
+// 	alert( t / (unitsDigit + hundredsDigit));
+// }else{
+// 	alert( t / (thousandsDigit + tensDigit));
+// }
+
+
+// 63 
+
+// const t = 4325;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t / 10) % 10);
+// const hundredsDigit = Math.floor((t / 100) % 10);
+// const thousandsDigit = Math.floor( t / 1000); 
+
+// if( unitsDigit === 1 || tensDigit === 1 || hundredsDigit === 1 || thousandsDigit === 1 ){
+// 	alert("1");
+// }else{
+// 	alert("0");
+// }
+
+
+// 64
+
+// const y  = 4323;
+
+// const unitsDigit = y % 10;
+// const tensDigit = Math.floor((y / 10) % 10);
+
+// if (unitsDigit + tensDigit === 5){
+// 	let y = ;
+// }else{
+// 	y = d;
+// }
+// alert(y);
+
+
+// 65
+
+// const number = 4326;
+
+// const unitsDigit = number % 10;
+// const tensDigit = Math.floor((number / 10) % 10);
+
+// if ( unitsDigit * tensDigit === 12){
+// 	alert('y=12');
+// }else{
+// 	alert('y=0');
+// }
+
+
+// 66
+
+// const t = 7321;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t / 10) % 10);
+// const hundredsDigit = Math.floor((t / 100) % 10);
+// const thousandsDigit = Math.floor( t / 1000); 
+
+
+// if( unitsDigit === 4 || thousandsDigit === 4){
+// 	alert("YES");
+// }else{
+// 	alert("NO");
+// }
+
+// 67
+
+// const t = 7989;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t / 10) % 10);
+// const hundredsDigit = Math.floor((t / 100) % 10);
+// const thousandsDigit = Math.floor( t / 1000); 
+
+// const theSum = unitsDigit + tensDigit + hundredsDigit + thousandsDigit;
+
+// theSquareOfTheSum = Math.pow(theSum, 2);
+
+// if( t === theSquareOfTheSum){
+// 	alert("YES");
+// }else{
+// 	alert("NO");
+// }
+
+// 68  
+
+// const t = 7983;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t / 10) % 10);
+// const hundredsDigit = Math.floor((t / 100) % 10);
+// const thousandsDigit = Math.floor( t / 1000); 
+
+// const oneAndHundred = unitsDigit * hundredsDigit;
+
+// if( unitsDigit > tensDigit){
+// 	alert(oneAndHundred);
+// }else{
+// 	alert("1");
+// }
+
+
+// 69
+
+// const t = 1234;
+
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t / 10) % 10);
+// const hundredsDigit = Math.floor((t / 100) % 10);
+// const thousandsDigit = Math.floor( t / 1000); 
+
+// sumOfDigits = unitsDigit + tensDigit + hundredsDigit + thousandsDigit;
+// let y;
+// if( sumOfDigits > 20){
+// 	y = 1;
+// }else{
+// 	y = 0;
+// }alert(y);
+
+
+// 70
+
+const t = 1234;
 
 const unitsDigit = t % 10;
-const tensDigit = Math.floor((t % 100) / 10);
-const hundredsDigit = Math.floor(t / 100);
+const tensDigit = Math.floor((t / 10) % 10);
+const hundredsDigit = Math.floor((t / 100) % 10);
+const thousandsDigit = Math.floor( t / 1000); 
 
-const numbersArray = [unitsDigit, tensDigit, hundredsDigit];
-
-numbersArray.sort(function(a, b){
-	return b - a;
-});
-alert("Numbers in descending order: " + numbersArray.join(', '));
+productOfDigits = unitsDigit * tensDigit * hundredsDigit * thousandsDigit;
+let y;
+if( productOfDigits > 200){
+	y = 0;
+}else{
+	y = 1;
+}alert(y);
