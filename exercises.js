@@ -649,17 +649,159 @@
 
 // 70
 
-const t = 1234;
+// const t = 1234;
 
-const unitsDigit = t % 10;
-const tensDigit = Math.floor((t / 10) % 10);
-const hundredsDigit = Math.floor((t / 100) % 10);
-const thousandsDigit = Math.floor( t / 1000); 
+// const unitsDigit = t % 10;
+// const tensDigit = Math.floor((t / 10) % 10);
+// const hundredsDigit = Math.floor((t / 100) % 10);
+// const thousandsDigit = Math.floor( t / 1000); 
 
-multipledDigits = unitsDigit * tensDigit * hundredsDigit * thousandsDigit;
-let y;
-if( multipledDigits > 200){
-	y = 0;
-}else{
-	y = 1;
-}alert(y);
+// multipledDigits = unitsDigit * tensDigit * hundredsDigit * thousandsDigit;
+// let y;
+// if( multipledDigits > 200){
+// 	y = 0;
+// }else{
+// 	y = 1;
+// }alert(y);
+
+
+// 151 Տպել բոլոր այն բնական թվերի գումարը, որոնց վրա առանց մնացորդի բաժանվում է տրված n բնական թիվը
+
+// function sumOfDivisors(n) {
+//   let sum = 0;
+
+//   for (let i = 1; i <= n; i++) {
+//     if (n % i === 0) {
+//       sum += i;
+//     }
+//   }
+
+//   return sum;
+// }
+// //for example
+// const n = 100;
+// const result = sumOfDivisors(n);
+// alert(`The sum of divisors of ${n} is ${result}`);
+
+// 152 Տպել բոլոր այն բնական թվերի արտադրյալը, որոնց վրա առանց մնացորդի բաժանվում է տրված n բնական թիվը
+
+// function multiplyOfDivisors(n) {
+//   let multiply = 1;
+
+//   for (let i = 1; i <= n; i++) {
+//     if (n % i === 0) {
+//       multiply *= i;
+//     }
+//   }
+
+//   return multiply;
+// }
+// //for example
+// const n = 15;
+// const result = multiplyOfDivisors(n);
+// alert(`The multiply of divisors of ${n} is ${result}`);
+
+
+// 153 Տպել բոլոր այն բնական թվերի գումարը, որոնց վրա տրված n բնական թիվը բաժանելիս կմնա 2 մնացորդ
+
+// function sumOfDivisors(n) {
+//   let sum = 0;
+
+//   for (let i = 1; i <= n; i++) {
+//     if (n % i === 2) {
+//       sum += i;
+//     }
+//   }
+
+//   return sum;
+// }
+// //for example
+// const n = 5;
+// const result = sumOfDivisors(n);
+// alert(`The sum of divisors of ${n} is ${result}`);
+
+// 154 Տպել բոլոր այն բնական թվերի արտադրյալը, որոնց վրա տրված n բնական թիվը բաժանելիս կմնա 3 մնացորդ
+
+// function multiplyOfDivisors(n) {
+//   let multiply = 1;
+
+//   for (let i = 1; i <= n; i++) {
+//     if (n % i === 3) {
+//       multiply *= i;
+//     }
+//   }
+
+//   return multiply;
+// }
+// //for example
+// const n = 10;
+// const result = multiplyOfDivisors(n);
+// alert(`The multiply of divisors of ${n} is ${result}`);
+
+
+// 155  Տպել բոլոր այն երկնիշ թվերի գումարը, որոնք բազմապատիկ են 3 թվին
+
+//   let sum = 0;
+
+//   for (let i = 10; i <= 99; i++) {
+//     if (i % 3 === 0) {
+//       sum += i;
+//     }
+//   }
+
+// alert("The sum of two-digit multiples of 3 is: " + sum);
+
+
+// 156  Տպել բոլոր այն երկնիշ թվերի արտադրյալը, որոնք բազմապատիկ են 3 և 5 թվերին
+
+
+// let sum = 1;
+
+//   for (let i = 10; i <= 99; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       sum *= i;
+//     }
+//   }
+
+// alert("The sum of two-digit multiples of 3 and 5 is: " + sum);
+
+
+// 157 Տպել բոլոր այն եռանիշ թվերի գումարը, որոնք բազմապատիկ չեն 5 թվին
+
+// let sum = 0;
+
+//   for (let i = 100; i <= 999; i++) {
+//     if (i % 5 !== 0) {
+//       sum += i;
+//     }
+//   }
+
+// alert("The sum of three-digit non multiples of 5 is: " + sum);
+
+
+// 158  Տպել բոլոր այն եռանիշ թվերի արտադրյալը, որոնք բազմապատիկ չեն 2 և 3 թվերին
+
+// let product = 1;
+
+//   for (let i = 100; i <= 105; i++) {
+//     if (i % 3 !== 0 && i % 2 !== 0) {
+//       product *= i;
+//     }
+//   }
+
+// alert("The product of three-digit non multiples of 2 and 3 is: " + product);
+
+
+// 159  Տպել բոլոր այն եռանիշ թվերի արտադրյալը, որոնք 3-ի բաժանելիս կմնա 1 մնացորդ, իս 4-ի բաժանելիս կնմա 2 մնացորդ։
+
+let product = 1;
+
+  for (let i = 100; i <= 110; i++) {
+    if (i % 3 == 1 && i % 4 == 2) {
+      product *= i;
+    }
+  }
+
+alert("The product of three-digit non multiples of 2 and 3 is: " + product);
+
+
