@@ -794,14 +794,44 @@
 
 // 159  Տպել բոլոր այն եռանիշ թվերի արտադրյալը, որոնք 3-ի բաժանելիս կմնա 1 մնացորդ, իս 4-ի բաժանելիս կնմա 2 մնացորդ։
 
-let product = 1;
+// let product = 1;
 
-  for (let i = 100; i <= 110; i++) {
-    if (i % 3 == 1 && i % 4 == 2) {
-      product *= i;
+//   for (let i = 100; i <= 110; i++) {
+//     if (i % 3 == 1 && i % 4 == 2) {
+//       product *= i;
+//     }
+//   }
+
+// alert("The product of three-digit non multiples of 2 and 3 is: " + product);
+
+
+// 160 Տպել այն ամենափոքր եռանիշ թիվը, որը 16-ով բազմապատկելիս դառնւմ է բնական թվի քառակուսի։
+
+let n = 1;
+
+  for (let i = 100; i <= 999; ) {
+    if (i * 16 === n * n) {
+      alert(n);
+      break;
+    }else{
+    	n++;
     }
   }
 
-alert("The product of three-digit non multiples of 2 and 3 is: " + product);
+  // 161 Տպել այն ամենափոքր քառանիշ թիվը, որը 26-ով բազմապատկելիս դառնւմ է բնական թվի քառակուսի։
 
 
+//   function findSmallestNumber() {
+//   for (let num = 1000; num <= 9999; num++) {
+//     const product = num * 26;
+//     const squareRoot = Math.sqrt(product);
+
+//     // Check if the squareRoot is a whole number (natural number)
+//     if (Number.isInteger(squareRoot)) {
+//       return num;
+//     }
+//   }
+// }
+
+// const smallestNumber = findSmallestNumber();
+// alert(`The smallest four-digit number is ${smallestNumber}`);
