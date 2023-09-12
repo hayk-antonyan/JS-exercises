@@ -807,19 +807,36 @@
 
 // 160 Տպել այն ամենափոքր եռանիշ թիվը, որը 16-ով բազմապատկելիս դառնւմ է բնական թվի քառակուսի։
 
-let n = 1;
+// let n = 1;
 
-  for (let i = 100; i <= 999; ) {
-    if (i * 16 === n * n) {
-      alert(n);
-      break;
-    }else{
-    	n++;
-    }
-  }
+//   for (let i = 100; i <= 999; ) {
+//     if (i * 16 === n * n) {
+//       alert(n);
+//       break;
+//     }else{
+//     	n++;
+//     }
+//   }
 
-  // 161 Տպել այն ամենափոքր քառանիշ թիվը, որը 26-ով բազմապատկելիս դառնւմ է բնական թվի քառակուսի։
+// Version 2
 
+// function findSmallestNumber(){
+// 	for (let number = 100; number <= 999; number++ ){
+// 		const product = number * 16;
+// 		const squareRoot = Math.sqrt(product);
+
+// 		if(Number.isInteger(squareRoot)){
+// 			return number;
+// 		}
+// 	}
+// }
+
+// const smallestNumber = findSmallestNumber();
+// alert(`The smallest tree-digit number is ${smallestNumber}`);
+
+
+
+// 161 Տպել այն ամենափոքր քառանիշ թիվը, որը 26-ով բազմապատկելիս դառնւմ է բնական թվի քառակուսի։
 
 //   function findSmallestNumber() {
 //   for (let num = 1000; num <= 9999; num++) {
@@ -835,3 +852,66 @@ let n = 1;
 
 // const smallestNumber = findSmallestNumber();
 // alert(`The smallest four-digit number is ${smallestNumber}`);
+
+
+// 162 Տպել այն ամենամեծ քառանիշ թիվը, որը 14-ով բազմապատկելիս դառնւմ է բնական թվի քառակուսի։
+
+// function findBiggestNumber() {
+//   for (let num = 9999; num >= 1000; num--) {
+//     const product = num * 14;
+//     const squareRoot = Math.sqrt(product);
+
+//     if (Number.isInteger(squareRoot)) {
+//       return num;
+//     }
+//   }
+// }
+
+// const biggestNumber = findBiggestNumber();
+// alert(`The biggest four-digit number is ${biggestNumber}`);
+
+
+// 163 Տպել այն ամենամեծ քառանիշ թիվը, որը 18-ով բազմապատկելիս դառնւմ է բնական թվի քառակուսի։
+
+// function findBiggestNumber() {
+//   for (let num = 9999; num >= 1000; num--) {
+//     const product = num * 18;
+//     const squareRoot = Math.sqrt(product);
+
+//     if (Number.isInteger(squareRoot)) {
+//       return num;
+//     }
+//   }
+// }
+
+// const biggestNumber = findBiggestNumber();
+// alert(`The biggest four-digit number is ${biggestNumber}`);
+
+
+// 164 Տպել այն ամենափոքր եռանիշ թիվը, որի քառակուսի արմատը մեծ է տրված n բնական թվից
+
+
+function findSmallestNumber(n){
+
+	for (let num = 100; num < 1000; num ++ ){
+		const squareRoot = Math.sqrt(num);
+
+		if(squareRoot > n && Number.isInteger(squareRoot)){
+			return num;
+		}
+	}
+	return null;
+}
+
+const n = 15;
+const smallestnumber = findSmallestNumber(n);
+
+if( smallestnumber !== null){
+	alert(`The smallest number is ${smallestnumber}`);
+}else{
+	alert(`There is no three digit number whose square root is greather than ${n} `);
+}
+
+
+// 165 
+
