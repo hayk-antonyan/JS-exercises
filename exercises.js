@@ -891,27 +891,247 @@
 // 164 Տպել այն ամենափոքր եռանիշ թիվը, որի քառակուսի արմատը մեծ է տրված n բնական թվից
 
 
-function findSmallestNumber(n){
+// function findSmallestNumber(n){
 
-	for (let num = 100; num < 1000; num ++ ){
-		const squareRoot = Math.sqrt(num);
+// 	for (let num = 100; num < 1000; num ++ ){
+// 		const squareRoot = Math.sqrt(num);
 
-		if(squareRoot > n && Number.isInteger(squareRoot)){
-			return num;
-		}
-	}
-	return null;
+// 		if(squareRoot > n && Number.isInteger(squareRoot)){
+// 			return num;
+// 		}
+// 	}
+// 	return null;
+// }
+
+// const n = 15;
+// const smallestnumber = findSmallestNumber(n);
+
+// if( smallestnumber !== null){
+// 	alert(`The smallest number is ${smallestnumber}`);
+// }else{
+// 	alert(`There is no three digit number whose square root is greather than ${n} `);
+// }
+
+
+// 165 T տրամաբանական տիպի փոփոխականին կվերագրվի true արժեքը, եթե տրված n բնական թիվը 3-ի աստիճան է, հակառակ դեպքում false:
+// Տպել t-ի արժեքը։
+
+
+
+// function isPowerOfThree(n) {
+//   // Check if n is a positive integer
+//   if (n <= 0 || n % 1 !== 0) {
+//     return false;
+//   }
+  
+//   // Use logarithm properties to check if it's a power of 3
+//   const logBase3 = Math.log10(n) / Math.log10(3);
+  
+//   // If logBase3 is an integer, then n is a power of 3
+//   return logBase3 % 1 === 0;
+// }
+
+// // Example usage:
+// const n = 9; // Change this value to test different numbers
+// const t = isPowerOfThree(n);
+// console.log(t); // This will print "true" if n is a power of 3, and "false" otherwise
+
+
+// 166 y փոփոխականին վերագրել 0 արժեքը, եթե տրված n բնական թիվը 4-ի աստիճան չէ, հակառակ դեպքում՝ 1 արժեքը։
+
+// function isPowerOf4(n) {
+//   // Check if n is a positive integer and is a power of 4
+//   return n > 0 && (n & (n - 1)) === 0 && (n % 3 === 1);
+// }
+
+// const n = 64; // Replace with your natural number
+// const y = isPowerOf4(n) ? 1 : 0;
+
+// alert(y); // Output: 1 (if n is a power of 4), 0 (otherwise)
+
+
+// 168 p տրամաբանական տիպի փոփոխականին վերագրել true արժեքը, եթե տրված n (n>1) թիվը պարզ է, հակառակ դեպքում false։ Տպել p փոփոխականի արժեքը
+
+
+// function isPrime(n) {
+//   if (n <= 1) {
+//     return false;
+//   }
+  
+//   if (n <= 3) {
+//     return true;
+//   }
+  
+//   if (n % 2 === 0 || n % 3 === 0) {
+//     return false;
+//   }
+  
+//   let i = 5;
+//   while (i * i <= n) {
+//     if (n % i === 0 || n % (i + 2) === 0) {
+//       return false;
+//     }
+//     i += 6;
+//   }
+  
+//   return true;
+// }
+
+// const n = 17; // Replace with the number you want to check
+// const p = isPrime(n);
+
+// console.log(p); // Output: true if n is prime, false otherwise
+
+
+// 169 Տրված են  x և y բնական թվերը։ z փոփոխականին վերագրել 5 արժեքը, եթե (x+y) թիվը պարզ է, հակառակ դեպքում 6 արժեքը։ Տպել z փոփոխականի արժեքը։
+
+
+// function isPrime(n) {
+//   if (n <= 1) {
+//     return false;
+//   }
+  
+//   if (n <= 3) {
+//     return true;
+//   }
+  
+//   if (n % 2 === 0 || n % 3 === 0) {
+//     return false;
+//   }
+  
+//   let i = 5;
+//   while (i * i <= n) {
+//     if (n % i === 0 || n % (i + 2) === 0) {
+//       return false;
+//     }
+//     i += 6;
+//   }
+  
+//   return true;
+// }
+
+// let x = 7;
+// let y = 10;
+// let sum = x+y;
+// let z;
+
+// if (isPrime(sum)) {
+// 	z = 5;
+// }else{
+// 	z = 6;
+// }
+
+// alert(z);
+
+
+// 170 Տրված է n բնական թիվը։ Ստանալ և տպել n-ից մեծ այն ամենափոքր թիվը, որը 2-ի աստիճանն է։
+
+// function smallestPowerOfTwo(n){
+
+// 	let power = 1;
+
+// 	while (power <= n){
+
+// 		power *= 2;
+// 	}
+// 	return power;
+// }
+
+// const n = 10; 
+// const result = smallestPowerOfTwo(n);
+// alert(result);
+
+
+// 171 Տրված է N բնական թիվը։ Հաշվել և արտածել N-ի ֆակտորիալը։
+
+ // function factorial(N){
+ // 	 let result = 1;
+
+ // 	for (let i = 2; i <= N; i++){
+ // 		 result *= i;
+ // 	}
+ // 	return result;
+ // }
+
+ // const N = 10;
+ // const result = factorial(N);
+ // alert(result);
+
+
+// 172 Տրված է N բնական թիվը։ Հաշվել և արտածել N-ի կրկնակի ֆակտորիալը, որտեղ N!! = N(N-2)(N-4)...: Եթե N-ը զույգ է, ապաա վերջին արտադրիչը հավասար է 2-ի, հակառակ դեպքում՝ 1-ի։
+
+// function doubleFactorial(N) {
+//   if (N <= 0) {
+//     return 1;
+//   } else {
+//     return N * doubleFactorial(N - 2);
+//   }
+// }
+
+// // Example usage:
+// const N = 6; // Replace this with your desired value of N
+// const result = doubleFactorial(N);
+// console.log(result); // This will print the double factorial of N
+
+
+// 180 Արտածել true, եթե տրված n բնական թիվը հանդիսանում է 3-ի աստիճան, հակառակ դեպքում false:
+
+// function powerOfTree(n){
+
+// 	if( n % 3 == 0){
+// 		alert('true');
+// 	}else{
+// 		alert('false');
+// 	}
+// }
+
+// const n = 27;
+// powerOfTree(n);
+
+
+// 181 Տրված է N բնական թիվը, որը 2-ի որևէ աստիճան է հանդիսանում։ N = 2-ի k աստիճան։ Հաշվել և արտածել K-ի արժեքը։  
+
+// function calculateK(N) {
+//   if (N <= 0 || (N & (N - 1)) !== 0) {
+//     // N should be a positive power of 2
+//     return NaN;
+//   }
+
+//   let k = 0;
+//   while (N > 1) {
+//     N /= 2;
+//     k++;
+//   }
+
+//   return k;
+// }
+
+// // Example usage:
+// const N = 8; // N is a power of 2 (2^3 = 8)
+// const k = calculateK(N);
+// console.log(`k = ${k}`);
+
+// 185  Բանկում ներդրված նախնական ավանդը 30000 դրամ է։ Յուրաքանչյուր ամիս այն ավելանում է P (0<P<25) տոկոսով։
+// Հաշվել, թե քանի ամիս հետո ստացված գումարը կգերազանցի 100000 դրամը։ 
+// Արտածել ստացված ամիսների քանակը և ավանդի վրեջնական գումարը։
+
+function calculateMonthsToExceedTarget(initialDeposit, P, targetAmount) {
+  let currentAmount = initialDeposit;
+  let months = 0;
+
+  while (currentAmount < targetAmount) {
+    currentAmount += (currentAmount * (P / 100)); // Increase by P percent
+    months++;
+  }
+
+  return { months, redemptionAmount: currentAmount };
 }
 
-const n = 15;
-const smallestnumber = findSmallestNumber(n);
+// Example usage:
+const initialDeposit = 30000; // Initial deposit in AMD
+const P = 5; // Monthly increase in percent (you can change this value)
+const targetAmount = 100000; // Target amount in AMD
 
-if( smallestnumber !== null){
-	alert(`The smallest number is ${smallestnumber}`);
-}else{
-	alert(`There is no three digit number whose square root is greather than ${n} `);
-}
-
-
-// 165 
-
+const result = calculateMonthsToExceedTarget(initialDeposit, P, targetAmount);
+console.log(`It will take ${result.months} months to exceed ${targetAmount} AMD.`);
+console.log(`The redemption amount will be ${result.redemptionAmount} AMD.`);
