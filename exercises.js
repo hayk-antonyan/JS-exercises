@@ -1115,23 +1115,171 @@
 // Հաշվել, թե քանի ամիս հետո ստացված գումարը կգերազանցի 100000 դրամը։ 
 // Արտածել ստացված ամիսների քանակը և ավանդի վրեջնական գումարը։
 
-function calculateMonthsToExceedTarget(initialDeposit, P, targetAmount) {
-  let currentAmount = initialDeposit;
-  let months = 0;
+// function calculateMonthsToExceedTarget(initialDeposit, P, targetAmount) {
+//   let currentAmount = initialDeposit;
+//   let months = 0;
 
-  while (currentAmount < targetAmount) {
-    currentAmount += (currentAmount * (P / 100)); // Increase by P percent
-    months++;
-  }
+//   while (currentAmount < targetAmount) {
+//     currentAmount += (currentAmount * (P / 100)); // Increase by P percent
+//     months++;
+//   }
 
-  return { months, redemptionAmount: currentAmount };
+//   return { months, redemptionAmount: currentAmount };
+// }
+
+// // Example usage:
+// const initialDeposit = 30000; // Initial deposit in AMD
+// const P = 5; // Monthly increase in percent (you can change this value)
+// const targetAmount = 100000; // Target amount in AMD
+
+// const result = calculateMonthsToExceedTarget(initialDeposit, P, targetAmount);
+// console.log(`It will take ${result.months} months to exceed ${targetAmount} AMD.`);
+// console.log(`The redemption amount will be ${result.redemptionAmount} AMD.`);
+
+
+// 186 
+
+// function calculateMonthsToExceedTarget(initialDeposit, P, targetAmount) {
+//   let currentAmount = initialDeposit;
+//   let days = 0;
+
+//   while (currentAmount < targetAmount) {
+//     currentAmount += (currentAmount * (P / 100)); // Increase by P percent
+//     days++;
+//   }
+
+//   return { days, redemptionAmount: currentAmount };
+// }
+
+// // Example usage:
+// const initialDeposit = 20; // Initial deposit in AMD
+// const P = 5; // Monthly increase in percent (you can change this value)
+// const targetAmount = 80; // Target amount in AMD
+
+// const result = calculateMonthsToExceedTarget(initialDeposit, P, targetAmount);
+// alert(`It will take ${result.days} days to exceed ${targetAmount} km.`);
+// alert(`The crossed distance will be ${result.redemptionAmount} km.`);
+
+
+
+// 187 Տրված է N բնական թիվը։ Եթե այն պարզ թիվ է, ապա արտածել true, հակառակ դեպքում՝ false:
+
+// function simpleNumber(n){
+
+// 	if( n <= 1 ){
+// 		return false;
+// 	}
+// 	if(n <= 3 ){
+// 		return true;
+// 	}
+// 	if(n % 2 === 0 || n % 3 === 0){
+// 		return false;
+// 	}
+		
+// 	for (let i = 5; i*i <=n; i += 6){
+// 		if( n % i === 0 || n % (i + 2 ) === 0){
+// 			return false;
+// 		} 
+// 	}
+// 	return true;
+// }
+
+// let result = simpleNumber(17);
+// alert(result);
+
+
+// Տրված է n բնական թիվը։ Օգտագործելով ամբողջթվային բաժանումը և բաժանումից ստացած մնացորդը վերցնելու գործողությունը՝
+
+// 201 հաշվել և արտածել թվի թվանշանների քանակը
+
+// function countsDigits(n){
+
+// 	if ( n < 0 ){
+// 		n = -n;
+// 	}
+
+// 	let count = 0;
+// 	while (n >= 1){
+// 		n = Math.floor(n / 10 );
+// 		count ++;
+// 	}
+// 	return count;
+// }
+// const n = 123;
+// const digitCount = countsDigits(n);
+// console.log(`The number of digits in ${n} is: ${digitCount}`);
+
+
+// 202 հաշվել և արտածել թվի թվանշանների գումարը 
+
+// function sumOfDigits(number) {
+//     // Convert number to string to iterate through digits
+//     let numString = number.toString();
+//     let sum = 0;
+
+//     // Iterate through each digit and add it to the sum
+//     for (let i = 0; i < numString.length; i++) {
+//         // Convert digit back to number and add to sum
+//         sum += parseInt(numString[i]);
+//     }
+
+//     return sum;
+// }
+
+// // Example usage
+// let number = 54668445;
+// let digitSum = sumOfDigits(number);
+// console.log("Sum of digits is:", digitSum);
+
+
+// function sumDigits(){
+// 	var value = document.getElementById('thenumber').value;
+// 	sum = 0;
+
+// 	while(value){
+// 	sum += value % 10;
+// 	value = Math.floor(value / 10);
+// }
+
+// var resultat = document.getElementById('result');
+// resultat.value = sum;
+// }
+
+
+// 203 հաշվել և արտածել թվի թվանշանների արտադրյալը 
+
+// function sumDigits(){
+// 	var value = document.getElementById('thenumber').value;
+// 	sum = 1;
+
+// 	while(value){
+// 	sum *= value % 10;
+// 	value = Math.floor(value / 10);
+// }
+
+// var resultat = document.getElementById('result');
+// resultat.value = sum;
+// }
+
+
+// 204 արտածել թվի բոլոր թվանշանները՝ աջից ձախ հաջորդականությամբ
+
+function pronounceDigits(number) {
+    const digitNames = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let result = "";
+
+    while (number > 0) {
+        let digit = number % 10; // Extract the last digit
+        result = digitNames[digit] + " " + result; // Prepend digit name to the result
+        number = Math.floor(number / 10); // Remove the last digit
+    }
+    
+    return result.trim(); // Trim to remove extra space at the end
 }
 
-// Example usage:
-const initialDeposit = 30000; // Initial deposit in AMD
-const P = 5; // Monthly increase in percent (you can change this value)
-const targetAmount = 100000; // Target amount in AMD
+// Example usage
+let number = 12345;
+let pronunciation = pronounceDigits(number);
+console.log(pronunciation);
 
-const result = calculateMonthsToExceedTarget(initialDeposit, P, targetAmount);
-console.log(`It will take ${result.months} months to exceed ${targetAmount} AMD.`);
-console.log(`The redemption amount will be ${result.redemptionAmount} AMD.`);
+
